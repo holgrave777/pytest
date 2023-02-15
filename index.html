@@ -5,11 +5,11 @@
   </head>
   <body>
     <py-script>
-        print('Hello, World!')
-        print('This was written in python!')
-        for x in range(10):
-          print('I can say this 10 Times!')
-        print('The end')
+        import requests
+        URL = input("Enter the URL of the page you want to see the code for: ")
+        print("\n")
+        page = requests.get(URL)
+        print(page.text)
     </py-script>
   </body>
 </html>
